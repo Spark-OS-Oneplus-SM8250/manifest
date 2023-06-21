@@ -8,6 +8,14 @@
           fetch="https://github.com/Spark-Rom"
           revision="refs/heads/pyro"/>
 
+  <remote name="sm8250-common"
+          fetch="https://github.com/Spark-OS-Oneplus-SM8250"
+          revision="refs/heads/pyro"/>
+
+  <remote name="kernel"
+          fetch="https://github.com/Spark-OS-Oneplus-SM8250"
+          revision="refs/heads/OOS13"/>
+
   <remote  name="evo"
            fetch="https://github.com/Evolution-X"
            revision="refs/heads/snow" />
@@ -37,7 +45,7 @@
            revision="refs/heads/sunflowerleaf" />
 
   <!-- Device repos -->
-  <project path="device/spark/sepolicy" name="device_spark_sepolicy" remote="spark" />
+  <project path="device/spark/sepolicy" name="device_spark_sepolicy" remote="sm8250-common" />
   <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="spark" />
   <project path="device/qcom/sepolicy_vndr-legacy-um" name="device_qcom_sepolicy_vndr-legacy-um" remote="spark" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="spark" />
@@ -47,10 +55,10 @@
   <project path="external/hosts" name="StevenBlack/hosts" remote="github" revision="master" />
 
   <!-- Framework repos -->
-  <project path="frameworks/av" name="frameworks_av" remote="spark" />
-  <project path="frameworks/base" name="frameworks_base" remote="spark" />
+  <project path="frameworks/av" name="frameworks_av" remote="sm8250-common" />
+  <project path="frameworks/base" name="frameworks_base" remote="sm8250-common" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="spark" />
-  <project path="frameworks/native" name="frameworks_native" remote="spark" />
+  <project path="frameworks/native" name="frameworks_native" remote="sm8250-common" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="spark" />
 
   <!-- General repos -->
@@ -103,7 +111,28 @@
 
   <!-- vendor repos -->
   <project path="vendor/gms" name="android_vendor_gms" remote="spark-gitlab" clone-depth="1" />
-  <project path="vendor/spark" name="platform_vendor_spark" remote="spark" />
+  <project path="vendor/spark" name="platform_vendor_spark" remote="sm8250-common" />
   <project path="vendor/addons" name="vendor_addons" remote="spark" />
+
+  <!-- Sm8250 vendor repos-->
+  <project path="vendor/oneplus/kebab" name="vendor_oneplus_kebab" remote="sm8250-common" />
+  <project path="vendor/oneplus/instantnoodle" name="vendor_oneplus_instantnoodle" remote="sm8250-common" />
+  <project path="vendor/oneplus/instantnoodlep" name="vendor_oneplus_instantnoodlep" remote="sm8250-common" />
+  <project path="vendor/oneplus/lemonades" name="vendor_oneplus_lemonades" remote="sm8250-common" />
+  <project path="vendor/oneplus/sm8250-common" name="vendor_oneplus_sm8250-common" remote="sm8250-common" />
+  <project path="vendor/qcom/common" name="vendor_qcom_common" remote="sm8250-common" />
+
+  <!-- Sm8250 device repos-->
+  <project path="device/oneplus/kebab" name="device_oneplus_kebab" remote="sm8250-common" />
+  <project path="device/oneplus/instantnoodle" name="device_oneplus_instantnoodle" remote="sm8250-common" />
+  <project path="device/oneplus/instantnoodlep" name="device_oneplus_instantnoodlep" remote="sm8250-common" />
+  <project path="device/oneplus/lemonades" name="device_oneplus_lemonades" remote="sm8250-common" />
+  <project path="device/oneplus/sm8250-common" name="device_oneplus_sm8250-common" remote="sm8250-common" />
+  <project path="device/qcom/common" name="device_qcom_common" remote="sm8250-common" />
+
+  <!-- Sm8250 Additionnal repos-->
+  <project path="hardware/oplus" name="hardware_oplus" remote="sm8250-common" />
+  <project path="kernel/oneplus/sm8250" name="kernel_oneplus_sm8250" remote="kernel" />
+  <project path="scripts" name="scripts" remote="sm8250-common" />
 
 </manifest>
